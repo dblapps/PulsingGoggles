@@ -1,0 +1,355 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 3.4  (Win32)">
+	<META NAME="AUTHOR" CONTENT="David Levi">
+	<META NAME="CREATED" CONTENT="20141109;14031022">
+	<META NAME="CHANGEDBY" CONTENT="David Levi">
+	<META NAME="CHANGED" CONTENT="20141109;16191845">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin: 0.79in }
+		P { margin-bottom: 0.08in }
+		A:link { so-language: zxx }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P ALIGN=LEFT STYLE="margin-bottom: 0in"><FONT SIZE=6><B>PULSATING
+EYE GOGGLES HOW-TO</B></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">As
+requested, here is a how-to for how to make the pulsating eye goggles
+I created for my home haunt costume this past Halloween (2014).  One
+caveat, though.  The goggles I made do <B>not</B> have holes in the
+eyes for visibility.  I wore them on my forehead, over a black morph
+mask, so they were positioned just above my eyes.  They could be done
+a little differently so you could wear them over your eyes like
+regular goggles, though you would certainly have somewhat limited
+visibility.  Also, I've described how I made these, but this could
+certainly be simplified.</FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">BTW,
+the Arduino sketch I wrote for this just makes the eyes pulsate red. 
+However, the NeoPixel ring LEDs are RGB LEDs, so they can display any
+color.  Fiddling with the sketch can make the eyes light up in
+different colors and patterns.</FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">This
+is the first time I've tried writing a how-to article.</FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Okay,
+first a list of materials you'll need:</FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><BR>
+</P>
+<OL>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Goggles.
+	 I used a pair of steampunk welding goggles from amazon.com. Here's
+	a link to the ones I used: 
+	<A HREF="http://www.amazon.com/gp/product/B002DLYR8A/ref=oh_aui_detailpage_o06_s00?ie=UTF8&amp;psc=1">http://www.amazon.com/gp/product/B002DLYR8A/ref=oh_aui_detailpage_o06_s00?ie=UTF8&amp;psc=1</A>
+	 Note that those are currently not available on Amazon, but there
+	are several other options there as well.  Just following the link
+	and pick something similar.  The specific pair shouldn't matter
+	much.  Main thing is you want ones with the 50mm cup size.</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">A
+	white ping-pong ball, with any labeling scraped off</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Pair
+	of plastic half-eyeballs.  I also got these from Amazon, here is a
+	link to ones similar to what I used: 
+	<A HREF="http://www.amazon.com/Generic-Acrylic-Plastic-Eyeball-Halloween/dp/B00EQ28XRK/ref=pd_sim_t_1?ie=UTF8&amp;refRID=0TCFRCKFTC34SY0KRTA9">http://www.amazon.com/Generic-Acrylic-Plastic-Eyeball-Halloween/dp/B00EQ28XRK/ref=pd_sim_t_1?ie=UTF8&amp;refRID=0TCFRCKFTC34SY0KRTA9</A></FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Gloss
+	Mod-Podge</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">silicone
+	glue</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">hot
+	glue gun, a couple glue sticks</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">black
+	sharpie marker</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">small
+	amount of black fabric</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">black
+	electrical tape</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">several
+	feet of 22AWG stranded hookup wire (easiest if you get some red,
+	black, and white colored)</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">small
+	amount of 22AWG solid hookup wire</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">2
+	12-LED NeoPixel rings, I got these from adafruit.com: 
+	<A HREF="http://www.adafruit.com/product/1643">http://www.adafruit.com/product/1643</A></FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Arduino
+	UNO: <A HREF="https://www.sparkfun.com/products/11021">https://www.sparkfun.com/products/11021</A></FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Arduino
+	enclosure box:  https://www.sparkfun.com/products/12839</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt"><SPAN LANG="en-US">battery
+	holder: 
+	</SPAN><A HREF="http://www.amazon.com/gp/product/B000LFVFU8/ref=oh_aui_search_detailpage?ie=UTF8&amp;psc=1">http://www.amazon.com/gp/product/B000LFVFU8/ref=oh_aui_search_detailpage?ie=UTF8&amp;psc=1</A></FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">battery
+	clip: 
+	http://www.amazon.com/gp/product/B00BVVFDFO/ref=oh_aui_search_detailpage?ie=UTF8&amp;psc=1</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">small
+	push button, for example: 
+	http://www.amazon.com/Momentary-N-O-Push-Button-Switch/dp/B0002ZPB34/ref=sr_1_10?s=industrial&amp;ie=UTF8&amp;qid=1415561521&amp;sr=1-10&amp;keywords=button</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt"><SPAN LANG="en-US">1
+	10K OHM resistor:  </SPAN><A HREF="https://www.sparkfun.com/products/11508">https://www.sparkfun.com/products/11508</A></FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt"><SPAN LANG="en-US">6
+	AA batteries</SPAN><BR></FONT><BR>
+	</P>
+	<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">You'll
+	also need a wire stripper and cutter, hobby/utility knife, soldering
+	iron, solder, and a PC or MAC to program the Arduino.</FONT></P>
+</OL>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">First
+make the eyes:</FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><BR>
+</P>
+<OL>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Cut
+	the ping-pong ball in half.</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Cut
+	a hole in each half of the ping-pong ball a little smaller than the
+	size of the plastic half-eyeballs</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Use
+	the sharpie marker to draw veins on the two ping-pong ball halves</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">put
+	the ping-pong ball halfs over the two half-eyeballs (with something
+	under the half-eyeballs to hold it up, I just put it on top of a
+	spray can cap</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">spread
+	some Mod-Podge over the ping-pong ball and half-eyeballs, let it
+	dry.  This will glue them together</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">use
+	the sharpie to extend the veins over the half-eyeballs up to their
+	irises</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">put
+	a couple more coats of Mod-Podge for strength (put some on the
+	inside as well).  Let each coat dry</FONT></P>
+</OL>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Note
+that you could skip the plastic half-eyeballs, and just use ping-pong
+balls.  IF you did this, you could just cut a small hole in the
+middle of the ping-pong ball for the eye pupil, use a color marker to
+draw the iris, and then draw the veins.  Either way, you'll want to
+coat it with Mod-Podge to make it glossy.</FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Now
+wire-up the NeoPixel rings:</FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><BR>
+</P>
+<OL>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Cut
+	3-inch pieces of the 22AWG stranded hookup wire.  You'll need 2
+	black pieces, 2 red pieces, and 1 white piece.  Strip both ends of
+	each wire</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Solder
+	one end of the two black wires to the GND connection on the two
+	NeoPixel rings (insert the wire from the back of the ring, i.e. the
+	side without the LEDs).</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Solder
+	one end of the two red wires to the 5V DC Power connection on the
+	two NeoPixel rings (insert wire from the back).</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Solder
+	one end of the white wire to the Data Input connection of one of the
+	NeoPixel rings.  Solder the other end of the white wire to the Data
+	Output of the other NeoPixel ring.</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Cut
+	3 long pieces of the 22 AWG stranded hookup wire.  You'll want these
+	pieces to be long enough to go from the goggles, over the top of
+	your head, down your back, and into your pocket.  A little extra
+	length is good to keep slack in the wires. Strip both ends of all 3
+	wires.</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Twist
+	together the second end of the two short black wires from above with
+	one end of the long black wire.  Solder these together, then wrap
+	them with a bit of black electrical tape.</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Twist
+	together the second end of the two short red wires from above with
+	one end of the long red wire.  Solder these together, then wrap them
+	with a bit of black electrical tape.</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Solder
+	one end of the long white wire to the Data Input connection of the
+	second NeoPixel ring (this is the ring that has the short white wire
+	soldered to its Data Output connection)</FONT></P>
+</OL>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Assemble
+the goggles:</FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><BR>
+</P>
+<OL>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Place
+	the two eyes you made earlier over the two NeoPixel rings, with the
+	LED side of the rings inside the eyes.  Put a few small dabs of
+	silicone glue around the edges to hold the rings in the eyes.  Let
+	this dry.</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Put
+	the two eyes into the cups of the goggles.  Put a few blobs of
+	silicone glue around the eyes to hold them in the goggle cups.  Let
+	this dry.</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Use
+	pieces of electrical tape to wrap and secure the wires from the
+	NeoPixel rings.  You want to have the wires running to the middle of
+	the goggles, between the two eye cups.  You should end up with the 3
+	long wires (one black, one red, and one white) hanging from the
+	middle of the goggles.</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Stretch
+	out the 3 long pieces of wire, and use pieces of electrical tape to
+	hold them together</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Cut
+	some pieces of black fabric, and use the hot glue gun to glue them
+	to the back side of the goggle eye cups.  You're basically trying to
+	cover the back of the cups to prevent light from leaking around the
+	back side of the goggles, and to cover over the wiring.</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Cut
+	another piece of black fabric, around 12 inches long.  Wrap it
+	around the wiring coming from the goggles, and use the hot glue gun
+	to secure it in place.  This part will go over the top of your head
+	while wearing the goggles.</FONT></P>
+</OL>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Now
+you can wire up the Arduino.</FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><BR>
+</P>
+<OL>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Put
+	the Arduino into the bottom half of its case.  It should snap into
+	place.</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Cut
+	a hole in the top of the case to mount the push button, insert the
+	button and secure it.</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Cut
+	3 pieces of the 22AWG solid hookup wire, strip both ends of each
+	piece.</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Solder
+	one end of the 10K OHM Resistor and one end of one of the first
+	hookup wire to one of the push button switch terminals</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Solder
+	one end of the second hookup wire to the other end of the 10K Ohm
+	Resistor</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Solder
+	the third hookup wire to the second terminal of the push button.</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Insert
+	the other end of the first hookup wire (the one from step 4 above)
+	into pin 8 of the Arduino.</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Insert
+	the other end of the second hookup wire (from step 5 above) into one
+	of the GND pins of the Arduino.</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Insert
+	the other end of the third hookup wire (step 6 above) into the 3.3V
+	pin of the Arduino.</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Cut
+	3 more short pieces of the 22AWG sold hookup wire, strip both ends
+	of each piece.</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Solder
+	one end of each of those 3 pieces to the ends of the 3 wires from
+	the goggles (the red, black, and white wires). Run these wires
+	through the top of the Arduino case (there is a slot in the top of
+	the case).</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Insert
+	the black wire from the goggles into one of the GND pins of the
+	Arduino</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Insert
+	the red wire from the goggles into the 5V pin of the Arduino</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Insert
+	the white wire from the goggles into pin 12 of the Arduino.</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Snap
+	the Arduino case together.</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">At
+	this point, you'll want to program the Arduino and make sure
+	everything is working.  Once you have it working, you'll want to
+	secure the wiring to the Arduino case.  I just wrapped it with a
+	bunch of electrical tape.</FONT></P>
+</OL>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Now
+program the Arduino:</FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><BR>
+</P>
+<OL>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Download
+	and install the Arduino IDE software (current version when I wrote
+	this is 1.0.6): <A HREF="http://arduino.cc/en/Main/Software#toc1">http://arduino.cc/en/Main/Software#toc1</A></FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Download
+	and install the NeoPixel library from github.  Go to
+	<A HREF="https://github.com/adafruit/Adafruit_NeoPixel">https://github.com/adafruit/Adafruit_NeoPixel</A>,
+	and click on the Download ZIP button on the right.  Unpack the ZIP
+	file, and follow the instructions on the github web page to install.
+	Basically you have to rename the folder, and copy that folder into
+	the Arduino IDE library folder.</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Download
+	the goggles Arduino sketch from github.  Got to
+	<A HREF="https://github.com/dblapps/PulsingGoggles">https://github.com/dblapps/PulsingGoggles</A>,
+	click on the Download ZIP button on the right.  Unpack the ZIP file.</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Plug
+	a USB type A cable into the Arduino, and into a USB port on your PC
+	or MAC.</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Launch
+	the Arduino IDE.  Load the sketch you downloaded in step 3 (click on
+	the File &rarr; Open menu item, find the sketch and open it)</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Select
+	Tools &rarr; Board from the IDE menu, and select the type of Arduino
+	you are using (Arduino UNO if you are using the same thing I used)</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Select
+	Tools &rarr; Serial Port from the IDE menu, and choose the
+	appropriate port for your Arduino (just play around until you get
+	the right one)</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Hit
+	the Upload button in the IDE toolbar (the round button with an arrow
+	pointing to the right).  This should upload the sketch to your
+	Arduino.  You should then see the eyes light up and start pulsing.</FONT></P>
+	<LI><P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Clicking
+	the button should make the eyes fade in or out.</FONT></P>
+</OL>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Once
+you have it working, unplug the USB cable from the Arduino.  Put 6 AA
+batteries in the battery holder, connect a battery clip to the
+battery holder, and plug it into the power plug on the Arduino.</FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><FONT SIZE=4 STYLE="font-size: 16pt">Put
+them on and go scare somebody!</FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in; font-weight: normal"><BR>
+</P>
+<P ALIGN=LEFT STYLE="text-indent: -0.25in; margin-bottom: 0in; font-weight: normal">
+<BR>
+</P>
+<P ALIGN=LEFT STYLE="text-indent: -0.25in; margin-bottom: 0in; font-weight: normal">
+<BR>
+</P>
+<P ALIGN=LEFT STYLE="text-indent: -0.25in; margin-bottom: 0in; font-weight: normal">
+<BR>
+</P>
+<P ALIGN=LEFT STYLE="text-indent: -0.25in; margin-bottom: 0in; font-weight: normal">
+<BR>
+</P>
+<P ALIGN=LEFT STYLE="text-indent: -0.25in; margin-bottom: 0in; font-weight: normal">
+<BR>
+</P>
+<P ALIGN=LEFT STYLE="text-indent: -0.25in; margin-bottom: 0in; font-weight: normal">
+<BR>
+</P>
+<P ALIGN=LEFT STYLE="text-indent: -0.25in; margin-bottom: 0in; font-weight: normal">
+<BR>
+</P>
+<P ALIGN=LEFT STYLE="text-indent: -0.25in; margin-bottom: 0in; font-weight: normal">
+<BR>
+</P>
+</BODY>
+</HTML>
